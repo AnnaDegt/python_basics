@@ -1,21 +1,24 @@
-
-
-def sum_user():
+def my_summa():
     summa = 0
     while True:
-        list_user = input("Введите cтроку чисел через пробел: ")
-        result = list_user.split()
-        result_user = ("".join(map(str, result)))
-        for el in result:
-            if el == "#":
-                print("Выполнение кода завершено")
-                break
+        list = 0
+        user_number = input("Введите числа через пробел, для выхода последним числом введите '#'").split()
+        cont = 0
+        if user_number[-1] == "#":
+            del user_number[-1]
+            while cont < len(user_number):
+                list= list + int(user_number[cont])
+                cont += 1
+            summa = summa + list
+            print(summa)
             break
-        for el in result:
-            number = [int(i) for i in str(result_user)]
-            for element in number:
-                summa += element
 
-    return summa
+        while cont < len(user_number):
+            list= list + int(user_number[cont])
+            cont += 1
 
-print(sum_user())
+        summa = summa + list
+        print(summa)
+
+my_summa()
+
