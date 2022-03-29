@@ -34,7 +34,7 @@ while result_list != []:
             del result_list[:2]
 
 m_profit = sum(list_profit) / len(list_profit)
-print(f"Соедняя прибыль компаний, которые получили прибыль равна {m_profit}")
+print(f"Средняя прибыль компаний, которые получили прибыль равна {m_profit}")
 
 result = []
 i = 0
