@@ -55,5 +55,7 @@ dict_m_profit = {"average_profit": m_profit}
 result.append(dict_m_profit)
 print(result)
 
+f_obj.close()
+
 with open("text_7.json", "w") as write_f:
     json.dump(result, write_f)
